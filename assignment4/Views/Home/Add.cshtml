@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "New Suggestion";
+}
+
+@model assignment4.Models.Suggestions
+
+<div class="text-center">
+    <h1>Add a new favorite restaurant to our list!</h1>
+    <form asp-action="Add" method="POST">
+        <div class="form-group">
+            <small class="form-text text-muted">* = Required</small>
+            <label asp-for="Name">*Name:</label>
+            <input type="text" class="form-control" asp-for="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="RecName">*Restaurant Name:</label>
+            <input type="text" class="form-control" asp-for="RecName">
+            <span asp-validation-for="RecName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="RecFav">Your favorite dish:</label>
+            <input asp-for="RecFav" type="text" class="form-control">
+            <span asp-validation-for="RecFav"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="RecPhone">Restaurant phone #:</label>
+            <input type="tel" asp-for="RecPhone" id="RecPhone">
+            <small class="form-text text-muted">Required Format = (000)000-000</small>
+            <span asp-validation-for="RecPhone"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn submit form-control btn-outline-secondary" />
+        </div>
+        
+    </form>
+</div>
+<script>$("#newRestaurantForm").validate({ rules: { RestPhone: { required: true, phoneUS: true } } });</script>

@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Recommended Restaurants";
+}
+
+@model IEnumerable<assignment4.Models.Suggestions>
+
+<div class="text-center">
+    <h1>Restaurant Recommendations</h1>
+
+    <table class="text-center table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Recommender</th>
+                <th scope="col">Restaurant Name</th>
+                <th scope="col">Favorite Dish</th>
+                <th scope="col">Phone #</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (assignment4.Models.Suggestions x in Model)
+            {
+            <tr>
+                <td>@x.Name</td>
+                <td>@x.RecName</td>
+                @if (x.RecFav == null)
+                {
+                    <td>It's all tasy!</td>
+                }
+                else
+                {
+                    <td>@x.RecFav</td>
+                }
+                @if (x.RecPhone == null)
+                {
+                    <td>None</td>
+                }
+                else
+                {
+                    <td>@x.RecPhone</td>
+                }
+            </tr>    
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,77 @@
+﻿.logo-width {
+    width: 17rem;
+}
+
+.nav-font-size {
+    font-size: 1.25rem;
+}
+
+.cards {
+    width: 65%;
+    margin: auto;
+}
+
+.description {
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+    width: 55%;
+}
+
+p {
+    line-height: 2.5rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-container {
+    width: 45%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5%;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+}
+
+.card:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.card {
+    margin-bottom: 2rem;
+}
+
+form {
+    width: 40%;
+    margin: auto;
+}
+
+form {
+    width: 40%;
+    margin: auto;
+}
+
+label {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    width: 100%;
+    font-size: 1.19rem;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+}
+
+.submit {
+    height: 3.3rem;
+    width: 50%;
+}
