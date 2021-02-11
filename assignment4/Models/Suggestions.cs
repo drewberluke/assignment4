@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+
+//suggestion model. validates and shows custom messages for requried fields and phone number validation
 namespace assignment4.Models
 {
     public class Suggestions

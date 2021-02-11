@@ -3,10 +3,13 @@ namespace assignment4.Models
 {
     public class RecommendationsModel
     {
+        //collects the record number when the records are initialized
         public RecommendationsModel(int num)
         {
             RecNo = num;
         }
+
+        //attributes, default values where required
         public int RecNo { get; }
         public string RecName { get; set; }
         public string RecFav { get; set; } = "It's all tasty!";
@@ -15,6 +18,7 @@ namespace assignment4.Models
         public string RecWeb { get; set; } = "<a>Website Coming Soon</a>";
         public string RecPhoto { get; set; }
 
+        //my recomendations
         public static RecommendationsModel[] GetRecs()
         {
             RecommendationsModel r1 = new RecommendationsModel(1)

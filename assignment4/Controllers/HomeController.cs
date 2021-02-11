@@ -18,6 +18,7 @@ namespace assignment4.Controllers
             _logger = logger;
         }
 
+        //index page, when it loads it passes the list of my recommendations to the view
         public IActionResult Index()
         {
             List<string> Recs = new List<string>();
@@ -28,12 +29,14 @@ namespace assignment4.Controllers
             return View(Recs);
         }
 
+        //displays the add view
         [HttpGet("AddRestaurant")]
         public IActionResult Add()
         {
             return View();
         }
 
+        //is called when the form is submitted, checks to make sure the form is valid then redirects to the list page 
         [HttpPost("AddRestaurant")]
         public IActionResult Add(Suggestions model)
         {
@@ -46,6 +49,7 @@ namespace assignment4.Controllers
             
         }
 
+        //displays the list view and pulls all of the suggestion objects and passes them to the view
         [HttpGet("ViewSuggestions")]
         public IActionResult List()
         {

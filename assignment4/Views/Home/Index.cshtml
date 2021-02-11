@@ -3,10 +3,14 @@
 }
 @model IEnumerable<string>
 
+
 <div class="text-center">
     <h1 class="display-4">Drew's Recomendations</h1>
 </div>
 <br />
+
+@*for loop that loops through all items in the recommendation model list and creates a new card for each item
+    uses html raw to force the browser to read the html elements instead of just a string*@
 <div class="cards">
     @foreach (string r in Model)
     {
