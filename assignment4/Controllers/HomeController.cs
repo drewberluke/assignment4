@@ -43,7 +43,7 @@ namespace assignment4.Controllers
             if (ModelState.IsValid)
             {
                 TempStorage.AddSuggestion(model);
-                return Redirect("/Home/List");
+                return Redirect("ViewSuggestions");
             }
             return View();
             
